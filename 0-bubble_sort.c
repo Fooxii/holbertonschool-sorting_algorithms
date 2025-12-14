@@ -31,7 +31,7 @@ array[i] = array[i + 1];
 array[i + 1] = temp;
 
 swapped = 1;
-print_array(array, size);
+print_array(array, (int)size);
 }
 i++;
 }
