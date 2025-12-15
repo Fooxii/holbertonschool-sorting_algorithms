@@ -10,17 +10,26 @@
 
 void selection_sort(int *array, size_t size)
 {
-size_t min, temp, i, j;
-for (j = 0; j < size; j++)
+size_t min, i, j;
+int temp;
+
+if (!array || size < 2)
 {
-min = array[j];
-for (i = j; i < size; i++)
+return;
+}
+
+for (j = 0; j < size - 1; j++)
+{
+min = j;
+
+for (i = j + 1; i < size; i++)
 {
 if (array[i] < array[min])
 {
 min = i;
 }
 }
+
 if (min != j)
 {
 temp = array[j];
